@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Kumar Shukla - Portfolio</title>
+    <link rel="icon" href="https://placehold.co/32x32/3b82f6/ffffff/png?text=AS" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <div id="custom-cursor"></div>
+
+    <header class="header-glassy shadow-lg sticky top-0 z-50 rounded-b-xl">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between" role="navigation" aria-label="Main Navigation">
+            <a href="#" class="text-2xl font-extrabold text-gray-800 transform transition-transform hover:scale-105" aria-label="Anand Kumar Shukla - Home">Anand Kumar Shukla</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Home section">Home</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to About section">About</a>
+                <a href="#skills" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Skills section">Skills</a>
+                <a href="#projects" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Projects section">Projects</a>
+                <a href="#experience" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Experience section">Experience</a>
+                <a href="#education" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Education section">Education</a>
+                <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Certificates section">Certificates</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-blue-500 transition-colors py-2" aria-label="Scroll to Contact section">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="mobileMenuButton" class="md:hidden text-gray-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors" aria-label="Open mobile navigation menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden header-glassy py-4 border-t border-gray-200">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#home" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Home section">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to About section">About</a>
+                <a href="#skills" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Skills section">Skills</a>
+                <a href="#projects" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Projects section">Projects</a>
+                <a href="#experience" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Experience section">Experience</a>
+                <a href="#education" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Education section">Education</a>
+                <a href="#certificates" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Certificates section">Certificates</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-blue-500 transition-colors block w-full text-center py-2 text-lg" aria-label="Scroll to Contact section">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 md:py-32 rounded-b-3xl shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 bg-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                    Hello, I'm Anand Kumar Shukla
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 animate-fade-in-up animate-delay-200">
+                    A passionate Data Science Intern and Full-Stack Developer.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-scale-in animate-delay-400">
+                    <a href="https://www.linkedin.com/in/anand-kumar-shukla/" target="_blank" class="bg-white text-blue-700 hover:bg-blue-100 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center space-x-3 group" aria-label="Connect on LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl group-hover:animate-bounce-in"></i> <span class="hidden sm:inline">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/thecoatcard" target="_blank" class="bg-gray-800 text-white hover:bg-gray-700 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center space-x-3 group" aria-label="View GitHub profile">
+                        <i class="fab fa-github text-xl group-hover:animate-spin-fast"></i> <span class="hidden sm:inline">GitHub</span>
+                    </a>
+                    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download="Anand_Kumar_Shukla_Resume.pdf" class="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-full font-bold shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center space-x-3 group" aria-label="Download my resume (PDF)">
+                        <i class="fas fa-download text-xl group-hover:animate-bounce"></i> <span class="hidden sm:inline">Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="about-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="about-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">About Me</h2>
+                <div class="md:flex items-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0 animate-on-scroll animate-delay-200">
+                        <img src="anand.jpg" alt="Anand Kumar Shukla - Professional Portrait" class="rounded-full w-48 h-48 mx-auto object-cover border-4 border-blue-500 shadow-xl transition-all duration-300 transform hover:scale-105">
+                    </div>
+                    <div class="md:w-2/3 text-lg leading-relaxed text-gray-700 space-y-4 animate-on-scroll animate-delay-300">
+                        <p>
+                            Hello! I'm Anand Kumar Shukla, a dedicated professional with a passion for Data Science and Full-Stack Development. My journey in technology has equipped me with a diverse skill set, allowing me to tackle complex problems and build innovative solutions.
+                        </p>
+                        <p>
+                            I recently completed an internship as a Data Science Intern at BioLogic Products Pvt Ltd, where I honed my analytical skills by uncovering shared ingredient patterns and developing backend feature enhancements using regression techniques. My commitment to effective communication ensured 100% on-time delivery of project milestones.
+                        </p>
+                        <p>
+                            Beyond data, I'm a hands-on developer, having built a full-stack To-Do Application with secure authentication and email functionalities, and this very portfolio website using modern web technologies. I thrive on optimizing processes and enhancing user interaction, always striving for efficiency and a seamless experience. I'm eager to contribute my skills to challenging projects and continue growing in the tech landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 md:py-24 bg-gray-100 rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="skills-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="skills-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">My Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-100">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-code text-blue-500 mr-3 text-2xl"></i> Languages</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>R</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-200">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-database text-blue-500 mr-3 text-2xl"></i> Databases</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Derby</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-300">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-sitemap text-blue-500 mr-3 text-2xl"></i> Frameworks</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>ReactJS</li>
+                            <li>ExpressJS</li>
+                            <li>NodeJS</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-400">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-wrench text-blue-500 mr-3 text-2xl"></i> Tools</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Hadoop</li>
+                            <li>Excel</li>
+                            <li>Tableau</li>
+                            <li>PowerBI</li>
+                            <li>Hive</li>
+                            <li>Vscode</li>
+                            <li>IntelliJ</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-500">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-desktop text-blue-500 mr-3 text-2xl"></i> Platforms</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Windows</li>
+                            <li>Linux</li>
+                            <li>Mac</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 md:py-24 bg-white rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="projects-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="projects-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">My Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-100">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">TO-DO APPLICATION</h3>
+                        <p class="text-blue-600 mb-2 text-sm">Jan 2025 - Feb 2025</p>
+                        <p class="text-gray-600 mb-4 text-sm">Tech: ReactJS, NodeJS, ExpressJS, MongoDB, JWT, Nodemailer</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Built a full-stack To-Do Application with secure JWT-based user authentication and password encryption.</li>
+                            <li>Integrated email functionality using Nodemailer to enable password reset via a secure link.</li>
+                            <li>Enabled authenticated users to perform complete CRUD operations on tasks, enhancing personal productivity.</li>
+                            <li>Planned and designed a leaderboard feature for future implementation to encourage timely task completion through gamification.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-200">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">This Portfolio Website</h3>
+                        <p class="text-blue-600 mb-2 text-sm">Feb 2025 - Mar 2025</p>
+                        <p class="text-gray-600 mb-4 text-sm">Tech: ReactJS (concept), HTML, Tailwind CSS, JavaScript</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Designed and developed a fully responsive and visually appealing personal portfolio website.</li>
+                            <li>Built a modern UI with smooth animations, interactive components, and elegant section transitions.</li>
+                            <li>Showcased projects, skills, and contact information in a clean, user-friendly layout optimized for all devices.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-300 md:col-span-2 mx-auto w-full md:w-3/4">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">DATA MANIPULATION HELPER</h3>
+                        <p class="text-blue-600 mb-2 text-sm">Jun 2024 - Jul 2024</p>
+                        <p class="text-gray-600 mb-4 text-sm">Tech: Java, DSA, Java Swing</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Engineered a desktop-based data handler with 10+ CRUD operations using Java Swing and OOP principles.</li>
+                            <li>Optimized sorting algorithms using Merge Sort $(O(n~log~n))$ for 25% faster data processing.</li>
+                            <li>Facilitated seamless UI interaction to enhance data management efficiency by 10%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-16 md:py-24 bg-gray-100 rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="experience-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="experience-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">Experience</h2>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-100">
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">Data Science Intern</h3>
+                    <p class="text-blue-600 text-lg mb-2">BioLogic Products Pvt Ltd - Remote</p>
+                    <p class="text-gray-600 mb-4 text-sm">May 2024 - Jul 2024</p>
+                    <p class="text-gray-600 mb-4 text-sm">Tech: Excel, Regression, Data Analysis</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Spearheaded analysis of 10+ brand product lines to uncover shared ingredient patterns, driving strategic product alignment and data-backed decisions.</li>
+                        <li>Developed backend feature enhancements by applying regression techniques, contributing to a 15% increase in analytical accuracy.</li>
+                        <li>Led team collaboration through effective communication, ensuring 100% on-time delivery of project milestones over a 3-month internship period.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-16 md:py-24 bg-white rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="education-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="education-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">Education</h2>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-100">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Bachelor of Technology - Computer Science and Engineering</h3>
+                        <p class="text-blue-600 text-lg mb-2">Lovely Professional University, Punjab, India</p>
+                        <p class="text-gray-600 mb-4 text-sm">Since Sep 2022</p>
+                        <p class="text-gray-700">CGPA: 7.44</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-200">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Intermediate</h3>
+                        <p class="text-blue-600 text-lg mb-2">Sanskar Global School, Pratapgarh, Uttar Pradesh</p>
+                        <p class="text-gray-600 mb-4 text-sm">Jul 2019 - Jul 2021</p>
+                        <p class="text-gray-700">Percentage: 86.6%</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg card-hover-effect animate-on-scroll animate-delay-300">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Matriculation</h3>
+                        <p class="text-blue-600 text-lg mb-2">Sanskar Global School, Pratapgarh, Uttar Pradesh</p>
+                        <p class="text-gray-600 mb-4 text-sm">Jun 2017 - Jul 2019</p>
+                        <p class="text-gray-700">Percentage: 75%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="py-16 md:py-24 bg-gray-100 rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="certificates-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="certificates-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">Certificates</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-100 text-center">
+                        <i class="fas fa-award text-blue-500 text-4xl mb-4 transform transition-transform hover:scale-110"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Data Analysis with Tableau</h3>
+                        <p class="text-gray-600 text-sm mb-1">Coursera: Tableau Learning Partner</p>
+                        <p class="text-gray-500 text-xs">Oct 2024 - Nov 2024</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-200 text-center">
+                        <i class="fas fa-award text-blue-500 text-4xl mb-4 transform transition-transform hover:scale-110"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Excel Fundamentals for Data Analysis</h3>
+                        <p class="text-gray-600 text-sm mb-1">Coursera: Macquarie University</p>
+                        <p class="text-gray-500 text-xs">Jan 2024 - Apr 2024</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md card-hover-effect animate-on-scroll animate-delay-300 text-center">
+                        <i class="fas fa-award text-blue-500 text-4xl mb-4 transform transition-transform hover:scale-110"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">SQL Essential Training</h3>
+                        <p class="text-gray-600 text-sm mb-1">LinkedIn</p>
+                        <p class="text-500 text-xs">Jan 2023 - Feb 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-white rounded-3xl shadow-xl mx-4 md:mx-auto my-12 max-w-5xl animate-on-scroll glassy-effect" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 section-title">Contact Me</h2>
+                <div class="flex flex-col md:flex-row md:space-x-12 items-start">
+                    <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll animate-delay-100">
+                        <p class="text-lg text-gray-700 mb-6">
+                            I'm always open to new opportunities and collaborations. Feel free to reach out to me via the form below or connect through my social channels.
+                        </p>
+                        <div class="space-y-4 text-gray-700">
+                            <p><i class="fas fa-envelope text-blue-500 mr-3"></i> kumaranand43856@gmail.com</p>
+                            <p><i class="fas fa-phone-alt text-blue-500 mr-3"></i> +91 9129124403</p>
+                            <p><i class="fas fa-map-marker-alt text-blue-500 mr-3"></i> Punjab, India</p>
+                        </div>
+                        <div class="flex space-x-6 mt-8">
+                            <a href="https://www.linkedin.com/in/anand-kumar-shukla/" target="_blank" class="text-gray-600 hover:text-blue-500 transition-colors text-4xl transform hover:scale-125" aria-label="LinkedIn profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/thecoatcard" target="_blank" class="text-gray-600 hover:text-blue-500 transition-colors text-4xl transform hover:scale-125" aria-label="GitHub profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full animate-on-scroll animate-delay-200">
+                        <form id="contactForm" class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                            <div class="mb-5">
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200" placeholder="Your Name" aria-required="true">
+                                <p id="nameError" class="error-message" role="alert" aria-live="polite"></p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200" placeholder="your@example.com" aria-required="true">
+                                <p id="emailError" class="error-message" role="alert" aria-live="polite"></p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject:</label>
+                                <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200" placeholder="Subject of your message">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                                <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200" placeholder="Your message here..." aria-required="true"></textarea>
+                                <p id="messageError" class="error-message" role="alert" aria-live="polite"></p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105 shadow-md">
+                                    Send Message
+                                </button>
+                            </div>
+                            <div id="formStatus" class="mt-4 text-center text-sm font-medium" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer class="bg-gray-800 text-white py-8 text-center rounded-t-3xl shadow-inner" role="contentinfo">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> Anand Kumar Shukla. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.linkedin.com/in/anand-kumar-shukla/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl transform hover:scale-125" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/thecoatcard" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl transform hover:scale-125" aria-label="GitHub profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:kumaranand43856@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl transform hover:scale-125" aria-label="Send email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+  <script src="script.js"></script> 
+</body>
+</html>
