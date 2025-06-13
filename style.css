@@ -488,3 +488,9 @@ textarea:focus {
         justify-content: center;
     }
 }
+/* Hide custom cursor on mobile devices */
+@media (max-width: 768px) {
+    #custom-cursor {
+        display: none !important;
+    }
+}

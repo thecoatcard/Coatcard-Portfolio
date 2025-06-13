@@ -1,7 +1,7 @@
-
+// Set current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-
+// Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -10,6 +10,7 @@ mobileMenuButton.addEventListener('click', () => {
     mobileMenuButton.setAttribute('aria-expanded', !isHidden);
 });
 
+// Smooth scroll on nav-link click
 document.querySelectorAll('.nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -27,11 +28,14 @@ document.querySelectorAll('.nav-link').forEach(anchor => {
     });
 });
 
+// Active nav-link highlight on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const observerOptions = {
-    root: null, rootMargin: '-50% 0px -50% 0px', threshold: 0
+    root: null,
+    rootMargin: '-50% 0px -50% 0px',
+    threshold: 0
 };
 
 const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -59,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+// Contact form validation
 const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -108,6 +112,7 @@ contactForm.addEventListener('submit', function (e) {
     }
 });
 
+// Scroll to top button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 window.onscroll = function () {
@@ -125,23 +130,28 @@ scrollToTopBtn.addEventListener('click', function () {
     });
 });
 
+// Custom cursor (desktop only)
 const customCursor = document.getElementById('custom-cursor');
-document.addEventListener('mousemove', (e) => {
-    customCursor.style.left = `${e.clientX}px`;
-    customCursor.style.top = `${e.clientY}px`;
-});
 
-const interactiveElements = document.querySelectorAll('a, button, input[type="submit"], input[type="text"], input[type="email"], textarea, .card-hover-effect');
-
-interactiveElements.forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        customCursor.classList.add('grow');
+if (window.innerWidth > 768) {
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.left = `${e.clientX}px`;
+        customCursor.style.top = `${e.clientY}px`;
     });
-    element.addEventListener('mouseleave', () => {
-        customCursor.classList.remove('grow');
-    });
-});
 
+    const interactiveElements = document.querySelectorAll('a, button, input[type="submit"], input[type="text"], input[type="email"], textarea, .card-hover-effect');
+
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            customCursor.classList.add('grow');
+        });
+        element.addEventListener('mouseleave', () => {
+            customCursor.classList.remove('grow');
+        });
+    });
+}
+
+// Animate on scroll elements
 const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
 const sectionTitleElements = document.querySelectorAll('.section-title');
 
