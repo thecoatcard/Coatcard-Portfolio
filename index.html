@@ -332,50 +332,6 @@
             </div>
         </div>
     </footer>
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const status = document.getElementById("formStatus");
-
-    // Clear previous messages
-    status.textContent = "";
-
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const subject = form.subject.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name || !email || !message) {
-      status.textContent = "❗ Please fill in all required fields.";
-      status.classList.add("text-red-600");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("entry.963455521", name);      // Name
-    formData.append("entry.962606298", email);     // Email
-    formData.append("entry.1372555964", subject);  // Subject
-    formData.append("entry.1695708713", message);  // Message
-
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLScGvLE8Rt6rj5avLulcH6RaucCust_1GyWu4gHMr32WdNik6Q/formResponse", {
-      method: "POST",
-      mode: "no-cors",
-      body: formData
-    }).then(() => {
-      status.textContent = "✅ Message sent successfully!";
-      status.classList.remove("text-red-600");
-      status.classList.add("text-green-600");
-      form.reset();
-    }).catch(() => {
-      status.textContent = "❌ Submission failed. Please try again.";
-      status.classList.remove("text-green-600");
-      status.classList.add("text-red-600");
-    });
-  });
-</script>
-
   <script src="script.js"></script> 
 </body>
 </html>
