@@ -1,43 +1,52 @@
+/* Basic styling for the body */
 body {
     font-family: 'Inter', sans-serif;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    cursor: none;
+    cursor: none; /* Custom cursor is handled by script.js */
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
 
-    overflow-x: hidden;
-
-    /* Adjusted background-color to a slightly warmer, off-white to complement skin tones from the image */
+    /* Base background color (a warm, off-white) */
     background-color: #F8F8F4;
+
+    /* Background image properties for a subtle and smooth look */
+    /* IMPORTANT: Replace 'path/to/your/background-image.jpg' with your actual image path. */
+    /* A subtle texture, blurred abstract, or faint pattern works best. */
+    background-image: url('https://placehold.co/1920x1080/E0E0E0/ffffff/png?text=Subtle+Background'); /* Placeholder - replace with your image */
+    background-repeat: no-repeat; /* Prevents image from tiling */
+    background-position: center center; /* Centers the image */
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-attachment: fixed; /* Keeps the background image fixed while content scrolls */
+    
+    /* Overlay for the background image to make it more subtle ("washed out" effect) */
+    /* Adjust rgba values for desired color and transparency (0.1 to 0.7 for opacity) */
+    background-blend-mode: overlay; /* Experiment with 'multiply', 'soft-light', 'screen' etc. */
+    background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity for a lighter, smoother look */
 }
 
-
+/* Custom Scrollbar Styling for Webkit Browsers */
 body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
-
 }
 
 body::-webkit-scrollbar-track {
-    /* Slightly darker track for more depth, inspired by subtle shadows in the image */
-    background: #E8EBEF;
+    background: #E8EBEF; /* Slightly darker track for depth */
     border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb {
-    /* Muted blue from the image (shirt/windows), less vibrant than previous A0C4FF */
-    background: #8FA8C9;
+    background: #8FA8C9; /* Muted blue for the thumb */
     border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    /* Darker hover for the scrollbar thumb, maintaining a muted tone */
-    background: #6C8CAE;
+    background: #6C8CAE; /* Darker hover for the thumb */
 }
 
-
+/* Navigation Link Active State */
 .nav-link.active {
     position: relative;
-    /* Deeper, more mature blue for active links, inspired by the blue in the image */
-    color: #1976D2;
+    color: #1976D2; /* Deeper, mature blue for active links */
     font-weight: 600;
 }
 
@@ -48,184 +57,125 @@ body::-webkit-scrollbar-thumb:hover {
     bottom: -5px;
     width: 100%;
     height: 3px;
-    /* Keeping this strong blue as it signifies active/important states */
-    background-color: #1976D2;
+    background-color: #1976D2; /* Strong blue for active state indicator */
     border-radius: 2px;
     transform: scaleX(1);
     transition: transform 0.3s ease-out;
 }
 
 .nav-link:not(.active)::after {
-    transform: scaleX(0);
+    transform: scaleX(0); /* Hide indicator for inactive links */
 }
 
-
+/* Scroll to Top Button Styling */
 #scrollToTopBtn {
-    display: none;
+    display: none; /* Hidden by default, shown by script.js */
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 99;
     border: none;
     outline: none;
-    /* Changed to a deeper, more earthy red/orange, inspired by the bindi/warm tones in the image */
-    background-color: #D32F2F;
+    background-color: #D32F2F; /* Deeper earthy red/orange */
     color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 50%;
     font-size: 18px;
-    /* Adjusted shadow to match the new background color */
     box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #scrollToTopBtn:hover {
-    /* Darker hover for the scrollbar thumb, maintaining a muted tone */
-    background-color: #C62828;
+    background-color: #C62828; /* Darker hover state */
     transform: scale(1.15);
-    /* Adjusted shadow for hover state */
     box-shadow: 0 0 25px rgba(211, 47, 47, 0.7), 0 0 40px rgba(211, 47, 47, 0.4);
 }
 
-
+/* Error Message Styling for Forms */
 .error-message {
-    color: #ef4444; /* Retaining this as error messages should be clearly visible */
+    color: #ef4444; /* Clearly visible red for errors */
     font-size: 0.875rem;
     margin-top: 0.25rem;
     font-weight: 500;
     text-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
 }
 
-
+/* Custom Cursor Styling (Desktop Only) */
 #custom-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none;
+    pointer-events: none; /* Ensures cursor doesn't interfere with clicks */
     z-index: 9999;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    /* Muted blue for the cursor border, matching the image's blue tones */
-    border: 2px solid rgba(130, 177, 255, 0.8); /* Slightly lighter, more subtle blue */
+    border: 2px solid rgba(130, 177, 255, 0.8); /* Muted blue border */
     background-color: transparent;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Centers the cursor icon */
     transition: width 0.2s ease-out, height 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 #custom-cursor.grow {
     width: 40px;
     height: 40px;
-    /* Warm orange/red for the cursor grow state, matching the primary accent color */
-    border-color: rgba(211, 47, 47, 0.9);
+    border-color: rgba(211, 47, 47, 0.9); /* Warm red/orange for grow state */
     background-color: rgba(211, 47, 47, 0.4);
-    /* Adjusted shadow for the grow cursor */
     box-shadow: 0 0 20px rgba(211, 47, 47, 0.8), 0 0 35px rgba(211, 47, 47, 0.6);
 }
 
-
+/* General Glassy Effect for Sections and Cards */
 .glassy-effect {
-    /* These values are generally good for a glassy look, maintaining the professional aesthetic */
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px) saturate(1.2);
-    -webkit-backdrop-filter: blur(20px) saturate(1.2);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(173, 216, 230, 0.1);
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly more opaque for better visibility */
+    backdrop-filter: blur(25px) saturate(1.5); /* Stronger blur and saturation */
+    -webkit-backdrop-filter: blur(25px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* More visible border */
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.15), inset 0 0 25px rgba(173, 216, 230, 0.15); /* Enhanced shadow */
 }
 
-
+/* Glassy Effect for Header */
 .header-glassy {
-    position: sticky; /* Explicitly set position to sticky */
-    top: 0; /* Align with top of the viewport */
-    z-index: 50; /* Ensure it stays above other content */
-    background-color: rgba(255, 255, 255, 0.95); /* Increased opacity for more prominence */
-    backdrop-filter: blur(25px) saturate(1.3); /* Slightly stronger blur and saturation */
-    -webkit-backdrop-filter: blur(25px) saturate(1.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Stronger, more defined shadow */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.98); /* Near opaque for prominent header */
+    backdrop-filter: blur(30px) saturate(1.4); /* Stronger blur for header */
+    -webkit-backdrop-filter: blur(30px) saturate(1.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-
-
+/* Keyframe Animations for Entrance Effects */
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.animate-fade-in-down {
-    animation: fadeInDown 0.8s ease-out forwards;
-    opacity: 0;
+/* Animation Classes */
+.animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; opacity: 0; }
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+.animate-scale-in { animation: scaleIn 0.8s ease-out forwards; opacity: 0; }
 
-}
+/* Animation Delay Utilities */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-600 { animation-delay: 0.6s; }
 
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.animate-scale-in {
-    animation: scaleIn 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-
-.animate-delay-100 {
-    animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-    animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-    animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-    animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-    animation-delay: 0.5s;
-}
-
-.animate-delay-600 {
-    animation-delay: 0.6s;
-}
-
-
+/* Animate On Scroll Effect */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -237,28 +187,25 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(0);
 }
 
-
+/* Card Hover Effect */
 .card-hover-effect {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .card-hover-effect:hover {
     transform: translateY(-12px);
-    /* Adjusted blue and orange shadows to be slightly more muted/deeper, matching the image aesthetic */
-    box-shadow: 0 20px 45px rgba(25, 118, 210, 0.4), /* Deeper blue shadow */
-        0 0 40px rgba(211, 47, 47, 0.3), /* Deeper red/orange shadow */
-        inset 0 0 15px rgba(25, 118, 210, 0.2);
-    /* Adjusted blue border color */
-    border: 1px solid rgba(25, 118, 210, 0.8);
+    box-shadow: 0 25px 50px rgba(25, 118, 210, 0.5), /* Deeper blue shadow */
+                0 0 50px rgba(211, 47, 47, 0.4),   /* Deeper red/orange shadow */
+                inset 0 0 20px rgba(25, 118, 210, 0.3);
+    border: 1px solid rgba(25, 118, 210, 0.9); /* Stronger blue border */
 }
 
-
+/* Section Title Styling with Animation */
 .section-title {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 1s ease-out, transform 1s ease-out, text-shadow 0.5s ease-out;
-    /* Adjusted orange text shadow to match the new red/orange hue */
-    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5), 0 0 20px rgba(211, 47, 47, 0.3);
+    text-shadow: 0 0 12px rgba(211, 47, 47, 0.6), 0 0 25px rgba(211, 47, 47, 0.4);
 }
 
 .section-title.is-visible {
@@ -266,132 +213,115 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translateY(0);
 }
 
-
+/* Background Pattern for Home Section */
 .bg-pattern {
-    /* Retaining existing pattern, consider if a different pattern or pattern color is needed based on specific image details */
     background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.04"%3E%3Cpath d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4H79v4h-1v-4h-9v4h-1v-4H69v4h-1v-4h-9v4h-1v-4H49v4h-1v-4h-9v4h-1v-4H29v4h-1v-4H19v4h-1v-4H9v4h-1v-4H0V95h4V85H0V75h4V65H0V55h4V45H0V35h4V25H0V15h4V5H0V4h96V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-10 0h-1v-9h1v9zm-9-9h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1zm-10 0h-1v-1h1v1z" stroke="none" /%3E%3C/g%3E%3C/svg%3E');
     background-size: 80px;
     background-repeat: repeat;
 }
 
-
+/* Home Section Gradient Background */
 #home {
-    /* Adjusted gradient to be slightly less vibrant, more earthy, and inspired by skin tones/background in the image */
-    background: linear-gradient(to right, #D32F2F, #FF8F00); /* Deeper red and a warm amber */
+    background: linear-gradient(to right, #D32F2F, #FF8F00); /* Deeper red and warm amber */
 }
 
-
+/* LinkedIn Icon Hover Effect */
 .group:hover .fa-linkedin-in {
-    /* Keeping the blue for LinkedIn as it's a brand color, but using a slightly darker material blue */
-    color: #1976D2;
-    filter: drop-shadow(0 0 8px rgba(25, 118, 210, 0.6));
+    color: #1976D2; /* Standard LinkedIn blue */
+    filter: drop-shadow(0 0 10px rgba(25, 118, 210, 0.8));
 }
 
+/* GitHub Icon Hover Effect */
 .group:hover .fa-github {
-    /* Changed GitHub hover color to align with new red/orange tones from the image */
-    color: #D32F2F;
-    filter: drop-shadow(0 0 8px rgba(211, 47, 47, 0.6));
+    color: #D32F2F; /* Aligned with new red/orange palette */
+    filter: drop-shadow(0 0 10px rgba(211, 47, 47, 0.8));
 }
 
-
+/* Button Hover Effects (White background with blue text) */
 .bg-white.text-blue-700:hover {
-    /* Adjusted hover colors to match new orange/red palette, providing a softer, warmer feel */
     background-color: #FFEECC; /* Light yellow-orange */
     color: #B71C1C; /* Dark red */
-    box-shadow: 0 0 20px rgba(255, 167, 38, 0.6);
+    box-shadow: 0 0 25px rgba(255, 167, 38, 0.8);
 }
 
-
-
+/* Button Hover Effects (Green background with white text) */
 .bg-green-600.text-white:hover {
-    /* Changed to a more subtle, warm orange/red for this hover state, closer to skin tones */
     background-color: #FFCDD2; /* Very light red/pinkish */
-    box-shadow: 0 0 20px rgba(239, 83, 80, 0.8);
+    box-shadow: 0 0 25px rgba(239, 83, 80, 0.9);
 }
 
-
-.text-gray-600.hover\\:text-blue-500:hover,
-.text-gray-400.hover\\:text-blue-400:hover {
-    /* Changed hover text color to align with new red/orange palette */
+/* Text Link Hover Effects */
+.text-gray-600.hover\:text-blue-500:hover,
+.text-gray-400.hover\:text-blue-400:hover {
     color: #D32F2F; /* Deep red */
-    filter: drop-shadow(0 0 5px rgba(211, 47, 47, 0.4));
+    filter: drop-shadow(0 0 6px rgba(211, 47, 47, 0.5));
 }
 
-
+/* Input/Textarea Focus Styling */
 input:focus,
 textarea:focus {
-    /* Keeping a clear blue for focus states as it's a good indicator for usability */
     border-color: #1976D2;
-    box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.4), 0 0 10px rgba(25, 118, 210, 0.2);
+    box-shadow: 0 0 0 5px rgba(25, 118, 210, 0.5), 0 0 12px rgba(25, 118, 210, 0.3);
 }
 
-
-.bg-blue-600.hover\\:bg-blue-700 {
+/* Submit Button Hover Effect */
+.bg-blue-600.hover\:bg-blue-700 {
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.bg-blue-600.hover\\:bg-blue-700:hover {
-    /* Changed this blue button hover to a deeper, more pronounced red/orange */
+.bg-blue-600.hover\:bg-blue-700:hover {
     background-color: #f4511e; /* Material Deep Orange 600 */
-    box-shadow: 0 0 20px rgba(244, 81, 30, 0.6), 0 0 30px rgba(244, 81, 30, 0.4);
+    box-shadow: 0 0 25px rgba(244, 81, 30, 0.8), 0 0 35px rgba(244, 81, 30, 0.6);
 }
 
-
-
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
     }
 
-
+    /* Header adjustments for mobile */
     .header-glassy {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-
     .header-glassy nav {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 
-
+    /* Home section adjustments for mobile */
     #home {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
-
     #home h1 {
         font-size: 2.5rem;
         line-height: 1.2;
     }
-
     #home p {
         font-size: 1.125rem;
         margin-bottom: 2rem;
     }
-
     #home .flex-col {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-
     #home .flex-col>* {
         width: 90%;
         margin-left: 0 !important;
         margin-right: 0 !important;
         margin-bottom: 1rem;
     }
-
     #home .flex-col>*:last-child {
         margin-bottom: 0;
     }
-
     #home .flex-col .group span {
         display: inline;
     }
 
-
+    /* General section adjustments for mobile */
     section {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -399,48 +329,43 @@ textarea:focus {
         margin-right: 1rem;
         border-radius: 20px;
     }
-
     .section-title {
         font-size: 2.25rem;
         margin-bottom: 2rem;
     }
 
-
+    /* About section adjustments for mobile */
     #about .md\:flex {
         flex-direction: column;
         align-items: center;
     }
-
     #about .md\:w-1\/3,
     #about .md\:w-2\/3 {
         width: 100%;
         text-align: center;
     }
-
     #about img {
         width: 160px;
         height: 160px;
         margin-bottom: 1.5rem;
     }
-
     #about p {
         font-size: 1rem;
         text-align: left;
     }
 
-
+    /* Grid layout adjustments for mobile */
     .grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
     .card-hover-effect {
         transform: none !important;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-
+    /* Projects section adjustments for mobile */
     #projects .md\:col-span-2 {
         grid-column: auto;
         width: 100%;
@@ -448,48 +373,44 @@ textarea:focus {
         margin-right: 0;
     }
 
-
+    /* Contact section adjustments for mobile */
     #contact .md\:flex-row {
         flex-direction: column;
         align-items: center;
     }
-
     #contact .md\:w-1\/2 {
         width: 100%;
         margin-bottom: 2rem;
     }
-
     #contact .flex.space-x-6 {
         justify-content: center;
         margin-top: 1.5rem;
     }
-
     #contact form {
         padding: 1.5rem;
     }
-
     #contact form input,
     #contact form textarea {
         padding: 0.75rem;
     }
-
     #contact button[type="submit"] {
         width: 100%;
         padding: 0.75rem 1.5rem;
     }
 
-
+    /* Footer adjustments for mobile */
     footer {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         border-radius: 0;
     }
-
     footer .flex {
         flex-direction: row;
         justify-content: center;
     }
 }
+
+/* Hide custom cursor on mobile devices */
 @media (max-width: 768px) {
     #custom-cursor {
         display: none !important;

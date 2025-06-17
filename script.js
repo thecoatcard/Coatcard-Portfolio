@@ -73,44 +73,7 @@ const emailError = document.getElementById('emailError');
 const messageError = document.getElementById('messageError');
 const formStatus = document.getElementById('formStatus');
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    let isValid = true;
 
-    nameError.textContent = '';
-    emailError.textContent = '';
-    messageError.textContent = '';
-    formStatus.textContent = '';
-    formStatus.classList.remove('text-green-600', 'text-red-600');
-
-    if (nameInput.value.trim() === '') {
-        nameError.textContent = 'Name is required.';
-        isValid = false;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailInput.value.trim() === '') {
-        emailError.textContent = 'Email is required.';
-        isValid = false;
-    } else if (!emailRegex.test(emailInput.value.trim())) {
-        emailError.textContent = 'Please enter a valid email address.';
-        isValid = false;
-    }
-
-    if (messageInput.value.trim() === '') {
-        messageError.textContent = 'Message is required.';
-        isValid = false;
-    }
-
-    if (isValid) {
-        formStatus.textContent = 'Message sent successfully! (This is a demo, no actual email sent)';
-        formStatus.classList.add('text-green-600');
-        contactForm.reset();
-    } else {
-        formStatus.textContent = 'Please correct the errors in the form.';
-        formStatus.classList.add('text-red-600');
-    }
-});
 
 // Scroll to top button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
